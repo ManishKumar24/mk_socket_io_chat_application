@@ -19,7 +19,7 @@ var port = process.env.PORT || 8080;
     io.sockets.on('connection', function(socket){
     console.log("New Connection Established");  
 
-    socket.on('new-user', function(data,callback){
+    socket.on('new user', function(data,callback){
         if(data in users){
             console.log("User already taken.");
             callback(false);
