@@ -131,7 +131,7 @@ jQuery(function($){
        $messageForm.submit(function(e){
             e.preventDefault();
             socket.emit('send message',$messageBox.val(),function(data){
-              $chat.append("<p align='right' class='error'>"+data+"&nbsp;&nbsp;</p><br/>");
+              $chat.append("<p align='right' class='error'>"+data+"&nbsp;&nbsp;</p>");
             });
             $messageBox.val('');
        });
